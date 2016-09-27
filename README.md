@@ -33,12 +33,31 @@ Script to daemonise any single threaded non-daemon process .
 
 ## Example Usages 
 daemonise an executable namely "process2" with sleep interval of 30 seconds and in 5 parallel instances . Also pass parameters stored in daemon.cfg file 
->>./daemoniserGen.sh  -p process2 -a START  -s 30  -c daemon.cfg -n 5
-
+```bash
+./daemoniserGen.sh  -p process2 -a START  -s 30  -c daemon.cfg -n 5
+```
 ![alt tag](https://github.com/abhijitmehta/DaemoniserGen/blob/master/Screen%20Shot%202016-09-28%20at%2012.26.18%20AM.png)
 
 
 Stopping above daemon of process2
->>./daemoniserGen.sh  -p process2 -a  STOP -c daemon.cfg 
-
+```bash
+./daemoniserGen.sh  -p process2 -a  STOP -c daemon.cfg 
+```
 ![alt tag](https://github.com/abhijitmehta/DaemoniserGen/blob/master/Screen%20Shot%202016-09-28%20at%2012.34.06%20AM.png)
+
+##Logs
+Logs and flags for standard output and error are created in path specified in the config files. 
+Example :
+```bash
+-rw-r--r--  1 amehta  410487729        0 Sep 28 00:33 process2.stopIt
+-rw-r--r--  1 amehta  410487729  3048345 Sep 28 00:33 process2.4343.4.out.log
+-rw-r--r--  1 amehta  410487729  3928978 Sep 28 00:33 process2.4343.4.error.log
+-rw-r--r--  1 amehta  410487729  3049830 Sep 28 00:33 process2.4343.3.out.log
+-rw-r--r--  1 amehta  410487729  3930892 Sep 28 00:33 process2.4343.3.error.log
+-rw-r--r--  1 amehta  410487729  3061800 Sep 28 00:33 process2.4343.2.out.log
+-rw-r--r--  1 amehta  410487729  3946320 Sep 28 00:33 process2.4343.2.error.log
+-rw-r--r--  1 amehta  410487729  3058335 Sep 28 00:33 process2.4343.1.out.log
+-rw-r--r--  1 amehta  410487729  3941854 Sep 28 00:33 process2.4343.1.error.log
+-rw-r--r--  1 amehta  410487729  3071430 Sep 28 00:33 process2.4343.0.out.log
+-rw-r--r--  1 amehta  410487729  3958732 Sep 28 00:33 process2.4343.0.error.log
+```
