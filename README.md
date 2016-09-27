@@ -1,7 +1,7 @@
 # DaemoniserGen
 Script to daemonise any single threaded non-daemon process . 
 
-
+##Options
 	+------------------------------------------------------------------------------------------------------------------------- +
 	|                                                                                                                          |
 	| USAGE  :: DaemoniserGen -p <ProcName> -a <START/STOP> -s <SLEEP_INTERVAL>  -c <CONFIG_FILE>   -n <NUM_OF_INSTANCES>      |
@@ -29,3 +29,16 @@ Script to daemonise any single threaded non-daemon process .
 	|                                                                                                                          |
 	|                                                                                                                          |
 	+--------------------------------------------------------------------------------------------------------------------------+
+
+
+## Example Usages 
+daemonise an executable namely "process2" with sleep interval of 30 seconds and in 5 parallel instances . Also pass parameters stored in daemon.cfg file 
+>>./daemoniserGen.sh  -p process2 -a START  -s 30  -c daemon.cfg -n 5
+
+![alt tag](https://github.com/abhijitmehta/DaemoniserGen/blob/master/Screen%20Shot%202016-09-28%20at%2012.26.18%20AM.png)
+
+
+Stopping above daemon of process2
+>>./daemoniserGen.sh  -p process2 -a  STOP -c daemon.cfg 
+
+![alt tag](https://github.com/abhijitmehta/DaemoniserGen/blob/master/Screen%20Shot%202016-09-28%20at%2012.34.06%20AM.png)
