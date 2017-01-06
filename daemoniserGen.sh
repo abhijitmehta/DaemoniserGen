@@ -92,7 +92,7 @@ initialize()
          fi
      fi
 
-     #(3) All the directories where tuxedo logs are located
+     #(3) All the directories where  logs are located
      LOG_DIR="${WORK_DIR}/log"
      if [ ! -d ${LOG_DIR} ]
      then
